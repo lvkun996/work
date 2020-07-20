@@ -1,0 +1,14 @@
+$jc:  space-between;
+
+
+.Layout-container {
+    display: flex;
+}
+
+.SideBar-conatiner {
+    width: $SideBarWidth;
+}
+
+.NavBar-container {
+    width: calc(100% - $SideBarWidth);
+}

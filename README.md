@@ -23,7 +23,11 @@ npm run test
 ### Lints and fixes files
 ```
 npm run lint
+
 ```
+3 < 2 < 1
+
+
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

@@ -1,0 +1,13 @@
+@mixin clearfix {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+@mixin  flex ($flex) {
+    display: flex;
+    justify-content: $flex;
+    align-items: center;
+}
