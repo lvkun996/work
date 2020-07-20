@@ -1,6 +1,6 @@
 <template>
     <div class="login-container">
-      <el-button @click="$router.push('/home')">click me</el-button>
+      <el-button @click="$router.push('/dashboard')">click me</el-button>
     </div>
 </template>
 

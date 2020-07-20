@@ -2,13 +2,15 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Layout from '@/layout'
+
 Vue.use(VueRouter)
 
 // 公共路由
 export const constantRoutes = [
   {
     path: '/',
-    redirect: '/login'
+    redirect: '/login',
+    hidden: true
   },
   {
     path: '/login',
@@ -16,11 +18,38 @@ export const constantRoutes = [
     hidden: true
   },
   {
-    path: '/home',
-    component: Layout
+    path: '/dashboard',
+    name: 'Dashboard',
+    component: Layout,
+    meta: {
+      title: '首页', icon: 'icon-yemian-copy-copy'
+    },
+    children: [
+      {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: () => import('@/views/dashboard'),
+        meta: {
+          title: '首页', icon: 'icon-yemian-copy-copy'
+        }
+      }
+    ]
   },
   {
-    path: '*'
+    path: '/questionBank',
+    name: 'QuestionBank',
+    component: Layout,
+    meta: { title: '题库', icon: 'icon-tiku1' },
+    children: [
+      {
+        path: '/questionBank',
+        name: 'questionBank',
+        component: () => import('@/views/questionBank'),
+        meta: {
+          title: '题库1', icon: 'icon-tiku1'
+        }
+      }
+    ]
   }
 ]
 
