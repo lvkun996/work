@@ -47,6 +47,8 @@ export default {
   methods: {
     addTags () {
       console.log(this.item)
+      this.$store.commit('routes/CLEAR_TAGVIEWS_STYLE')
+      this.item.isOk = true
       this.$store.commit('routes/SET_TAGVIEWS', this.item)
     }
   }

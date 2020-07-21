@@ -39,6 +39,6 @@ export default {
     height: 20px !important;
     margin-left: 50px;
     margin-bottom: -5px;
-    // margin-top: 20px;
+    margin-top: 20px;
 }
 </style>
